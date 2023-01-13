@@ -172,16 +172,33 @@ console.log(elem2);
 console.log("ELEM3");
 console.log(elem3);
 
+
 console.log("ADD");
+console.time('Add');
 console.log(field.add(elem1, elem2));
+console.timeEnd('Add');
+
 console.log("MUL");
+console.time('Mul');
 console.log(field.mul(elem1, elem2));
+console.timeEnd('Mul');
+
+
 console.log("POW CHECK");
+console.time('POW CHECK');
 console.log(field.pow(elem1, Math.pow(2, field.m) - 1));
+console.timeEnd('POW CHECK');
+
 console.log("QUADRATIC");
+console.time('QUADRATIC');
 console.log(field.quadratic(elem1, 2));
+console.timeEnd('QUADRATIC');
+
+
 console.log("INVERSE CHECK");
+console.time('INVERSE CHECK');
 console.log(inverseCheck(elem1));
+console.timeEnd('INVERSE CHECK');
 
 console.log("(a+b)*c")
 console.log(field.mul(field.add(elem1, elem2), elem3));
@@ -191,5 +208,10 @@ console.log(field.add(field.mul(elem1, elem3), field.mul(elem2, elem3)));
 
 console.log("MATRIX");
 console.log(field.multiplicativeMatrix);
+
+
+
+
+
 
 
